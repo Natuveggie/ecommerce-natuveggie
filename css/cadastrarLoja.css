@@ -1,0 +1,105 @@
+.cadastro-loja-content{
+    margin: 30px 80px;
+    color: #333;
+}
+.minha-loja{
+    width: 90%;
+}
+.cadastro-loja-content h1{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #c7d656;
+    font-weight: 600;
+}
+
+.cadastro-loja-content p{
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #555;
+    padding: 15px 0px;
+    margin-top: 15px;
+}
+.cadastro-loja-content select{
+    padding: 5px 20px 5px 5px;
+    width: 100%;
+    border-radius: 5px;
+    height: 60px;
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 15px;
+    background-color: #fbfbfb;
+}
+.cadastro-loja-content input[type=text], input[type=password], input[type=tel], input[type=file], textarea{
+    width: 100%;
+    padding: 20px;
+    background-color: #fbfbfb;
+    margin-top: 10px;
+    border: #ddd solid 1px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.cadastro-loja-content textarea{
+    width: 100%;
+    padding: 20px;
+    background-color: #fbfbfb;
+    margin-top: 10px;
+    border: #ddd solid 1px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    resize: none;
+    font-weight: 400;
+}
+.cadastro-loja-content label{
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.cadastro-loja-content .form-group{
+    margin-top: 30px;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* LISTA DE ESPECIFICAÇÕES */
+
+#lista-upload-imagem{
+    margin: 15px 0px;
+}
+#lista-upload-imagem li{
+    line-height: 20px;
+    color:#ababab;
+    font-size: 12px;
+}
+#imagem-loja{
+    width: 150px;
+    margin-top: 20px;
+    display: block;
+}
+/* ----------------------------------------------------------------------------- */
+/* MEDIA QUERY */
+
+@media (max-width: 340.98px){
+    .cadastro-loja-content {
+        margin: 30px 0px;
+    }
+}
+@media (max-width: 575.98px) {
+    .cadastro-loja-content {
+        margin: 30px 0px;
+    }
+    .minha-loja{
+        width: 100%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .cadastro-loja-content {
+        margin: 30px 0px;
+    }
+}
+@media (max-width: 991.98px) and (min-width: 768px){
+    .cadastro-loja-content {
+        margin: 30px 0px;
+    }
+}

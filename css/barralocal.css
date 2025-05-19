@@ -1,0 +1,37 @@
+.idtfloja {
+    width:100%;
+    height:60px;
+    position: relative;
+    background:#5f8569;
+    font-family:'Montserrat', sans-serif;
+    margin-bottom:40px;
+  }
+  
+  .idtfloja .left {
+    color:#fff;
+    font-size:14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height:60px;
+    padding-left:20px;
+    float:left;
+  }
+  
+  .idtfloja .right {
+    color:#fff;
+    font-size:14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height:60px;
+    padding-right:20px;
+    float:right;
+    font-style: italic;
+  }
+  
+  .idtfloja .right span {
+    font-style: normal;
+    font-weight:800;
+    text-transform: none;
+  }

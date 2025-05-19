@@ -1,0 +1,183 @@
+.formulario-loja {
+    clear: both;
+    position: relative;
+    height:auto;
+}
+
+.content-adm {
+    background:#fff;
+    width:80%;
+    float:right;
+    font-family: 'Montserrat', sans-serif;
+    padding:40px 55px 40px 65px;
+    height:auto;
+}
+
+.titulo-adm {
+    color:#5f8569;
+    font-size:22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom:30px;
+}
+
+.form-adm h1 {
+    color:#8f8f8f;
+    font-size:12px;
+}
+
+.form-adm input {
+    background:#fbfbfb;
+    border:none;
+    width:98.5%;
+    margin-bottom:30px;
+    padding:15px;
+    border-radius:4px;
+    font-size:12px;
+    border:1px solid #aaa;
+}
+
+.form-adm textarea {
+    background:#fbfbfb;
+    border:none;
+    width:98.5%;
+    margin-bottom:30px;
+    padding:15px;
+    border-radius:4px;
+    font-weight: 400 ;
+    font-size:12px;
+    border:1px solid #aaa;
+}
+
+.form-adm select {
+    background:#fbfbfb;
+    border:none;
+    width:98.5%;
+    margin-bottom:30px;
+    padding:15px;
+    border-radius:4px;
+    font-size:12px;
+    border:1px solid #aaa;
+    margin: 0;
+}
+
+.form-unico {
+    position: relative;
+    float:left;
+    width:100%;
+}
+
+.form-both {
+    position: relative;
+    float:left;
+    width:49.6%;
+}
+
+.form-adm input::-webkit-input-placeholder {
+    color:#b1b1b1;
+    font-weight:400;
+    font-size:11px;
+    font-family: 'Montserrat', sans-serif;
+    align:top;
+}
+
+.botao-alterar {
+    background:#5f8569;
+    color:#fff;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size:12px;
+    border:none;
+    cursor: pointer;
+    padding:10px 14px 10px 14px;
+    border-radius:6px;
+}
+
+.size-table {
+    height:auto;
+    padding-bottom:135px;
+}
+
+.botao-salvar {
+    background:#5f8569;
+    color:#fff;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size:12px;
+    border:none;
+    cursor: pointer;
+    padding:10px 14px 10px 14px;
+    border-radius:6px;
+}
+
+.botao-cancelar {
+    background:#ebebeb;
+    color:#b1b1b1;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size:12px;
+    border:none;
+    cursor: pointer;
+    padding:10px 14px 10px 14px;
+    border-radius:6px;
+}
+
+button:focus { outline: none; }
+
+.form-upload {
+    position: relative;
+    float:left;
+    width:49.6%;
+}
+
+.form-upload input {
+    background:#ebebea;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border:1px solid #868686;
+    cursor: pointer;
+    text-align:center;
+    float:left;
+    position: relative;
+}
+
+.botoes-loja {
+    position: relative;
+    margin-bottom:30px;
+    float:right;
+}
+
+.form-upload input::-webkit-input-placeholder {
+    color:#868686;
+}
+
+@media screen and (max-width:900px){
+    .content-adm {
+        width:100%;
+        margin: 0 auto;
+        float:none;
+        padding:40px 15px 0px 20px;
+    }
+
+    .size-table {
+        height:auto;
+        margin-bottom:30px;
+    }
+    
+}
+
+@media screen and (max-width:700px){
+    .form-both {
+        position: relative;
+        float:left;
+        width:100%;
+    }
+}

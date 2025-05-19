@@ -1,0 +1,190 @@
+.accordion-container {
+    position: relative;
+    border-top: none;
+    outline: 0;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #aaa;
+    background:#fbfbfb;
+    -webkit-box-shadow: 0px 0px 25px -16px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 0px 25px -16px rgba(0,0,0,0.23);
+    box-shadow: 0px 0px 25px -16px rgba(0,0,0,0.23);
+}
+
+.accordion-container .article-title {
+    display: block;
+    position: relative;
+    margin: 0;
+    font-size: 1.25em;
+    font-weight: normal;
+    color: #aaa;
+    height:60px;
+    cursor: pointer;
+    background: #fff;
+    border-top:1px solid #aaa;
+}
+
+.accordion-container .article-title .left {
+float:left;
+width:50%;
+height: 100%;
+}
+
+.accordion-container .article-title .left h2{
+text-align: left;
+padding-bottom:0px;
+font-size:15px;
+margin:14px 0px 0px 0px;
+padding-left:20px;
+}
+
+.accordion-container .article-title .left p{
+text-align: left;
+padding-left:20px;
+font-size:12px;
+margin:0;
+margin-bottom:14px;
+}
+
+.accordion-container .article-title .middle {
+float:left;
+width:40%;
+height: 100%;
+text-align:right;
+}
+
+.accordion-container .article-title .middle h3{
+padding-bottom:0px;
+font-size:13px;
+margin:23px 0px 23px 0px;
+padding-right:20px;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 500;
+}
+
+.accordion-container .article-title .right {
+float:left;
+width:9.6%;
+height: 100%;
+text-align: center;
+border-left: 1px solid #aaa;;
+}
+
+.accordion-container .article-title .right h5 {
+color:#aaa;
+position: relative;
+top:20px;
+font-style: normal;
+font-weight: 600;
+}
+
+.accordion-content {
+display: none;
+border-top:1px solid #aaa;
+background:#fbfbfb;
+}
+
+.accordion-content .one {
+width:33.2%;
+float:left;
+margin-top:30px;
+margin-bottom:30px;
+height:60px;
+border-right:1px solid #eee;
+display: -webkit-flex;
+display: flex;
+-webkit-align-items: center;
+align-items: center;
+}
+
+.accordion-content .one p {
+padding-left:55px;
+padding-right:55px;
+font-size:16px;
+font-weight: 500;
+color:#5f8569;
+margin:0;
+}
+
+.accordion-content .one span {
+color:#c3c3c3;
+font-size:13px;
+letter-spacing: 0.5px;
+}
+
+.accordion-content .one i {
+margin-right:5px;
+}
+
+.accordion-content .produto-uni {
+height:60px;
+background:#fff;
+width:100%;
+position: relative;
+padding-top:15px;
+}
+
+.accordion-content .produto-uni .conteudo-uni {
+width:91%;
+border-bottom:1px solid #c3c3c3;
+margin:0 auto;
+padding-bottom:15px;
+}
+
+.accordion-content .produto-uni .conteudo-uni h2 {
+font-size:16px;
+letter-spacing: 0.5px;
+font-weight: 600;
+margin:0;
+padding:0;
+color:#5f8569;
+}
+
+.accordion-content .produto-uni .conteudo-uni span {
+float:right;
+color:#5f8569;
+}
+
+.accordion-content .produto-uni .conteudo-uni h6 {
+color:#c3c3c3;
+font-size:12px;
+letter-spacing: 0.5;
+margin:0;
+padding:0;
+font-weight: 500;
+}
+
+.accordion-container .content-entry h5:before {
+    content: "+ ";
+}
+
+.accordion-container .content-entry.open h5:before {
+    content: "- ";
+}
+
+.altura-ped {
+    padding-bottom:170px;
+}
+
+@media screen and (max-width:700px) {
+.accordion-content .one {
+    width:100%;
+    height:30px;
+    margin-top:30px;
+    margin-bottom:30px;
+    border-right:none;
+}
+
+.accordion-content .one p {
+    padding-left:20px;
+}
+
+.accordion-container .article-title .left p{
+    font-size:9px;
+}
+
+.altura-ped {
+    padding-bottom:0px;
+}
+
+}

@@ -1,0 +1,36 @@
+/* ----------------------------------------------------------------------------- */
+/* RESUMO */
+.resumo{
+    height: 400px;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+.resumo h2{
+    border-bottom: 1px solid #d8d8d8;
+}
+.resumo h3{
+    border-top: 1px solid #d8d8d8;
+}
+.resumo h2, h3{
+    font-size: 1.2em;
+    padding: 10px 0px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.resumo p{
+    padding: 10px 0px;
+    line-height: 1;
+}
+.resumo p span, h3 span{
+    float: right;
+}
+ /* formatação do elemento */
+ #aplicar{
+	float:left;
+	margin:0px 0px 0px -70px;
+	cursor:pointer;
+	background:rgb(199, 214, 86);
+	height: 50px;
+    padding: 18px 10px;
+    border-radius: 0px 5px 5px 0px;
+ }

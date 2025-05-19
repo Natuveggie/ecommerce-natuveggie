@@ -1,0 +1,92 @@
+.sessao-excluir{
+    margin-top: 15px;
+}
+.meus-dados, .seguranca{
+    width: 91%;
+}
+.dados-content, .seguranca-content{
+    margin: 30px 80px;
+    color: #333;
+}
+.dados-content h1, .seguranca-content h1{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #c7d656;
+    font-weight: 600;
+}
+.dados-content p, .seguranca-content p{
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #555;
+    padding: 15px 0px;
+    margin-top: 15px;
+}
+.dados-content select, .seguranca-content select{
+    padding: 5px 20px 5px 5px;
+    width: 100%;
+    border-radius: 5px;
+    height: 60px;
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 15px;
+    background-color: #fbfbfb;
+}
+.dados-content input[type=text], input[type=password], input[type=tel]{
+    width: 100%;
+    padding: 20px;
+    background-color: #fbfbfb;
+    margin-top: 10px;
+    border: #ddd solid 1px;
+    border-radius: 5px;
+}
+.seguranca-content input[type=text], input[type=password], input[type=tel]{
+    width: 100%;
+    padding: 20px;
+    background-color: #fbfbfb;
+    margin-top: 10px;
+    border: #ddd solid 1px;
+    border-radius: 5px;
+}
+.seguranca-span{
+    width: 91%;
+    padding: 20px !important;
+    background-color: #fbfbfb;
+    margin-top: 10px;
+    border: #ddd solid 1px;
+    border-radius: 5px;
+    text-transform: inherit !important;
+}
+.dados-content label, .seguranca-content label{
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.dados-content .form-group, .seguranca-content .form-group{
+    margin-top: 30px;
+}
+/* ----------------------------------------------------------------------------- */
+/* MEDIA QUERY */
+
+@media (max-width: 340.98px){
+    .dados-content, .seguranca-content {
+        margin: 30px 0px;
+    }
+}
+@media (max-width: 575.98px) {
+    .dados-content, .seguranca-content {
+        margin: 30px 0px;
+    }
+    .meus-dados, .seguranca{
+        width: 100%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .dados-content, .seguranca-content {
+        margin: 30px 0px;
+    }
+}
+@media (max-width: 991.98px) and (min-width: 768px){
+    .dados-content, .seguranca-content {
+        margin: 30px 0px;
+    }
+}

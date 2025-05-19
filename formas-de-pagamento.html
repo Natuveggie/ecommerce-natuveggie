@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Desenvolver um marketplace que promova a comercialização de produtos orgânicos e veganos.">
+    <meta name="author" content="Equipe NatuVeggie">
+    <meta name="reply-to" content="contato@natuveggie.com.br">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NatuVeggie.com.br - A maior loja vegana.</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/grid.min.css">
+
+    <!-- CSS custome -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset-menu.css">
+    <link rel="stylesheet" href="./css/style-menu.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/dropdown.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/sidebar-adm.css">
+    <link rel="stylesheet" href="./css/botoes.css">
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/tooltip.css">
+    <link rel="stylesheet" href="./css/cadastro-loja.css">
+
+    <!-- VAI MUDAR -->
+    <link rel="stylesheet" href="./css/loja.css">
+    <link rel="stylesheet" href="./css/breadcrumb.css">
+
+    <!-- Resource style -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- Chat -->
+    <script src="//code.jivosite.com/widget.js" data-jv-id="Dayuux3QbX" async></script>
+</head>
+
+<body>
+    <!-- Menu desktop -->
+    <div class="container-fluid" id="menu-desktop" style="margin-top: 25px; margin-bottom: 19px;">
+        <header>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                    <a href="/">
+                        <img class="logotipo" src="img/logo.png" alt="Logotipo NatuVeggie">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="form-pesquisar">
+                        <input class="input-pesquisar" id="pesquisa-menu-desktop" placeholder="O que você procura?">
+                        <a href="/pesquisa" for="pesquisa-menu-desktop" class="fas fa-search input-icon"></a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                    <div class="butao-carrinho">
+                        <a href="/carrinho">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span id="preco">R$ 0,00</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                    <div class="dropdown logado" style="float:left; display: none;">
+                        <button class="dropbtn">
+                            <img src="img/user.png" alt="">
+                            <span style="position:relative; top:-6px;">Olá, <span id="nomeUsuario"></span> <i
+                                    class="fas fa-chevron-down" style="font-size:13px;"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="/perfil">Minha conta</a>
+                            <a href="/meus-pedidos">Meus pedidos</a>
+                            <a href="/cadastrar-loja">Vendas</a>
+                            <a onclick="logout(this)">Sair</a>
+                        </div>
+                    </div>
+                    <div class="minha-conta deslogado">
+                        <a id="myBtn">
+                            <img src="img/user.png" alt="" style="margin-right: 5px;">
+                            <span style="position:relative; top:-6px;">Minha conta</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="container-fluid" id="menu-mobile">
+        <div class="row">
+            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <header>
+                    <div class="cd-dropdown-wrapper">
+                        <a class="cd-dropdown-trigger" href="#0"><i class="fas fa-bars"></i></a>
+                        <nav class="cd-dropdown">
+                            <h2>NatuVeggie</h2>
+                            <a href="#0" class="cd-close">Close</a>
+                            <ul class="cd-dropdown-content">
+                                <!-- Categorias -->
+                                <li class="has-children">
+                                    <a href="#">Categorias</a>
+                                    <ul class="cd-secondary-dropdown is-hidden">
+                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                        <li class="see-all"><a href="#">Categorias</a></li>
+                                        <li class="has-children">
+                                            <a href="#">Frutas</a>
+                                            <ul class="is-hidden">
+                                                <li class="go-back"><a href="#0">Menu</a></li>
+                                                <li class="see-all"><a href="#">Frutas</a></li>
+                                                <li class="has-children">
+                                                    <a href="#0">Frutas vermelhas</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li class="see-all"><a href="#">Frutas vermelhas</a></li>
+                                                        <li><a href="#">Morango</a></li>
+                                                        <li><a href="#">Amora</a></li>
+                                                        <li><a href="#">Framboesa</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="#0">Frutas ácidas</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li class="see-all"><a href="#">Frutas ácidas</a></li>
+                                                        <li><a href="#">Limão</a></li>
+                                                        <li><a href="#">Laranja</a></li>
+                                                        <li><a href="#">Abacaxi</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Melancia &amp; Melão</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="#">Vegetais</a>
+                                            <ul class="is-hidden">
+                                                <li class="go-back"><a href="#0">Menu</a></li>
+                                                <li class="see-all"><a href="#">Vegetais</a></li>
+                                                <li><a href="#">Frutos</a></li>
+                                                <li><a href="#">Sementes</a></li>
+                                                <li><a href="#">Raízes &amp; tubérculos</a></li>
+                                                <li><a href="#">Bulbos</a></li>
+                                                <li class="has-children">
+                                                    <a href="#0">Folhas</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li class="see-all"><a href="#">Folhas</a></li>
+                                                        <li><a href="#">Alface</a></li>
+                                                        <li><a href="#">Couve</a></li>
+                                                        <li><a href="#">Espinafre</a></li>
+                                                        <li><a href="#">Agrião</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Caules</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <!-- .cd-secondary-dropdown -->
+                                </li>
+                                <!-- Lojas -->
+                                <li class="has-children">
+                                    <a href="#">Lojas</a>
+                                    <ul class="cd-dropdown-icons is-hidden">
+                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                        <li class="see-all"><a href="#">Lojas</a></li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-1" href="#">
+                                                <h3>Urban Food</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-2" href="#">
+                                                <h3>The Natural Corner</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-3" href="#">
+                                                <h3>Eat Smart</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-4" href="#">
+                                                <h3>Service #4</h3>
+                                                <p>This is the item description</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-5" href="#">
+                                                <h3>Fit.</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-6" href="#">
+                                                <h3>Vegan</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-7" href="#">
+                                                <h3>Naturebas</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-8" href="#">
+                                                <h3>Boa Terra</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-9" href="#">
+                                                <h3>Terra Verde</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-10" href="#">
+                                                <h3>The Natural</h3>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- .cd-dropdown-icons -->
+                                </li>
+
+                                <!-- Menu -->
+                                <li class="cd-divider">Divider</li>
+                                <li><a href="/">Início</a></li>
+                                <li><a href="/sobre">Sobre</a></li>
+                                <li><a href="/contato">Contato</a></li>
+                            </ul>
+                            <!-- .cd-dropdown-content -->
+                        </nav>
+                        <!-- .cd-dropdown -->
+                    </div>
+                    <!-- .cd-dropdown-wrapper -->
+                </header>
+            </div>
+            <div class="col-5 col-sm-4 col-md-4 col-lg-4 col-xl-5">
+                <a href="/">
+                    <img class="logotipo" src="img/logo.png" alt="Logotipo NatuVeggie">
+                </a>
+            </div>
+            <div class="col-2 col-sm-3 col-md-3 col-lg-3 col-xl-2">
+                <div class="butao-carrinho">
+                    <a href="/carrinho">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <div class="minha-conta">
+                    <a href="http://" target="_blank">
+                        <i class="far fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="form-pesquisar">
+            <input class="input-pesquisar" id="pesquisa-menu-mobile" placeholder="O que você procura?">
+            <a href="/pesquisa" for="pesquisa-menu-mobile" class="fas fa-search input-icon"></a>
+        </div>
+        <br>
+    </div>
+
+    <!-- Menu tablet -->
+    <div class="container-fluid" id="menu-tablet">
+        <div class="row">
+            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                <header>
+                    <div class="cd-dropdown-wrapper">
+                        <a class="cd-dropdown-trigger" href="#0"><i class="fas fa-bars"></i></a>
+                        <nav class="cd-dropdown">
+                            <h2>NatuVeggie</h2>
+                            <a href="#0" class="cd-close">Close</a>
+                            <ul class="cd-dropdown-content">
+                                <!-- Categorias -->
+                                <li class="has-children">
+                                    <a href="#">Categorias</a>
+                                    <ul class="cd-secondary-dropdown is-hidden">
+                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                        <li class="see-all"><a href="#">Categorias</a></li>
+                                        <li class="has-children">
+                                            <a href="#">Frutas</a>
+                                            <ul class="is-hidden">
+                                                <li class="go-back"><a href="#0">Menu</a></li>
+                                                <li class="see-all"><a href="#">Frutas</a></li>
+                                                <li class="has-children">
+                                                    <a href="#0">Frutas vermelhas</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li class="see-all"><a href="#">Frutas vermelhas</a></li>
+                                                        <li><a href="#">Morango</a></li>
+                                                        <li><a href="#">Amora</a></li>
+                                                        <li><a href="#">Framboesa</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="#0">Frutas ácidas</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li class="see-all"><a href="#">Frutas ácidas</a></li>
+                                                        <li><a href="#">Limão</a></li>
+                                                        <li><a href="#">Laranja</a></li>
+                                                        <li><a href="#">Abacaxi</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Melancia &amp; Melão</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="#">Vegetais</a>
+                                            <ul class="is-hidden">
+                                                <li class="go-back"><a href="#0">Menu</a></li>
+                                                <li class="see-all"><a href="#">Vegetais</a></li>
+                                                <li><a href="#">Frutos</a></li>
+                                                <li><a href="#">Sementes</a></li>
+                                                <li><a href="#">Raízes &amp; tubérculos</a></li>
+                                                <li><a href="#">Bulbos</a></li>
+                                                <li class="has-children">
+                                                    <a href="#0">Folhas</a>
+                                                    <ul class="is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li class="see-all"><a href="#">Folhas</a></li>
+                                                        <li><a href="#">Alface</a></li>
+                                                        <li><a href="#">Couve</a></li>
+                                                        <li><a href="#">Espinafre</a></li>
+                                                        <li><a href="#">Agrião</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Caules</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <!-- .cd-secondary-dropdown -->
+                                </li>
+                                <!-- Lojas -->
+                                <li class="has-children">
+                                    <a href="#">Lojas</a>
+                                    <ul class="cd-dropdown-icons is-hidden">
+                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                        <li class="see-all"><a href="#">Lojas</a></li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-1" href="#">
+                                                <h3>Urban Food</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-2" href="#">
+                                                <h3>The Natural Corner</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-3" href="#">
+                                                <h3>Eat Smart</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-4" href="#">
+                                                <h3>Service #4</h3>
+                                                <p>This is the item description</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-5" href="#">
+                                                <h3>Fit.</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-6" href="#">
+                                                <h3>Vegan</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-7" href="#">
+                                                <h3>Naturebas</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-8" href="#">
+                                                <h3>Boa Terra</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-9" href="#">
+                                                <h3>Terra Verde</h3>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="cd-dropdown-item item-10" href="#">
+                                                <h3>The Natural</h3>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- .cd-dropdown-icons -->
+                                </li>
+                                <!-- .has-children -->
+                                <li class="cd-divider">Divider</li>
+                                <li><a href="/">Início</a></li>
+                                <li><a href="/sobre">Sobre</a></li>
+                                <!-- <li><a href="#">Blog</a></li> -->
+                                <li><a href="/contato">Contato</a></li>
+                            </ul>
+                            <!-- .cd-dropdown-content -->
+                        </nav>
+                        <!-- .cd-dropdown -->
+                    </div>
+                    <!-- .cd-dropdown-wrapper -->
+                </header>
+            </div>
+            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <a href="/">
+                    <img class="logotipo" src="img/logo.png" alt="Logotipo NatuVeggie">
+                </a>
+            </div>
+            <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+                <div class="form-pesquisar">
+                    <input class="input-pesquisar" id="pesquisa-menu-tablet" placeholder="O que você procura?">
+                    <a href="/pesquisa" for="pesquisa-menu-tablet" class="fas fa-search input-icon"></a>
+                </div>
+            </div>
+            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                <div class="butao-carrinho">
+                    <a href="/carrinho">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                <div class="minha-conta">
+                    <a href="http://" target="_blank">
+                        <i class="far fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu main -->
+    <div class="container-fluid" id="menu-main">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <ul>
+                    <li>
+                        <a href="/">Início</a>
+                    </li>
+                    <li>
+                        <span>|</span>
+                        <a href="/sobre">Sobre</a>
+                    </li>
+                    <li>
+                        <span>|</span>
+                        <a href="/categorias-filtro">Categorias</a>
+                    </li>
+                    <li>
+                        <span>|</span>
+                        <a href="/contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <ul style="margin-left: 45%;">
+                    <li>
+                        <a href="/categorias">
+                            <span class="categorias vegetarianismo">V</span>
+                            Vegetarianismo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/categorias">
+                            <span class="categorias veganismo">V</span>
+                            Veganismo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-4">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <!-- Modal entrar -->
+            <div id="modal-entrar" class="row">
+                <div class="modal-cadastre col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div>
+                        <h4>Ola, seja bem-vindo</h4>
+                        <p>Entre em sua conta preenchendo o formulario ao lado para acessar o NatuVeggie.</p>
+                        <p>E novo por aqui? Entao, aperte o botao abaixo para entrar em sua conta.</p><br><br>
+                        <input type="button" class="btn btn-success btn-lg" id="link-cadastre" value="Cadastre-se">
+                    </div>
+                </div>
+                <div class="modal-entrar col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <span class="close">&times;</span>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert"
+                        id="notificacao-modal-entrar">
+                        <span id="msgNotificacao-modal-entrar">Usuário salvo com sucesso!</span>
+                    </div>
+                    <div id="space-1">
+                        <h5>Entre em sua conta</h5>
+
+                        <form>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                                <small class="form-text text-muted">Ex: alessandra.nastassja@dominio.com</small>
+                                <div class="email-invalid-feedback">
+                                    Preencha corretamente
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="senha">Senha</label>
+                                <input type="password" class="form-control" id="senha" placeholder="Digite sua senha"
+                                    autocomplete="current-password">
+                                <small class="form-text text-muted">Ex: alessandra123, @1l21l233dr1, alessandra</small>
+                                <div class="senha-invalid-feedback">
+                                    Preencha corretamente
+                                </div>
+                            </div>
+                            <input type="button" class="btn btn-success btn-lg" id="entrar" value="Entrar">
+                            <br><br>
+                            <a id="facebook-button"><i class="fab fa-facebook-square"></i> Entrar com o Facebook</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal cadastrar -->
+            <div id="modal-cadastrar" class="row">
+                <div class="modal-entrar col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert"
+                        id="notificacao-modal-cadastrar">
+                        <span id="msgnotificacao-modal-cadastrar">Usuário cadastrado com sucesso!</span>
+                    </div>
+                    <div id="space-1">
+                        <h5>Crie a sua conta</h5>
+
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Nome completo</label>
+                                <input type="text" class="form-control" id="nome"
+                                    placeholder="Digite seu nome completo">
+                                <small class="form-text text-muted">Ex: Alessandra Nastassja Santos</small>
+                                <div class="nome-invalid-feedback">
+                                    Preencha corretamente
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" class="form-control" id="emailCadastrado"
+                                    placeholder="Digite seu e-mail">
+                                <small class="form-text text-muted">Ex: alessandra.nastassja@dominio.com</small>
+                                <div class="emailCadastrado-invalid-feedback">
+                                    Preencha corretamente
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailConfirmar">Confirmar e-mail</label>
+                                <input type="email" class="form-control" id="emailConfirmar"
+                                    placeholder="Digite novamente seu e-mail">
+                                <small class="form-text text-muted">Ex: alessandra.nastassja@dominio.com</small>
+                                <div class="emailConfirmar-invalid-feedback">
+                                    Preencha corretamente
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-6">
+                                    <div class="space-2">
+                                        <div class="form-group">
+                                            <label for="senhaCadastrada">Senha</label>
+                                            <input type="password" class="form-control" id="senhaCadastrada"
+                                                placeholder="Digite sua senha" autocomplete="new-password">
+                                            <small class="form-text text-muted">Ex: alessandra123</small>
+                                            <div class="senhaCadastrada-invalid-feedback">
+                                                Preencha corretamente
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-6">
+                                    <div class="space-2">
+                                        <div class="form-group">
+                                            <label for="senha">Confirmar senha</label>
+                                            <input type="password" class="form-control" id="senhaConfirmar"
+                                                placeholder="Digite novamente" autocomplete="new-password"
+                                                style="margin-left: 5px;">
+                                            <small class="form-text text-muted">Ex: @1l21l233dr1</small>
+                                            <div class="senhaConfirmar-invalid-feedback">
+                                                Preencha corretamente
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="button" class="btn btn-success btn-lg" id="cadastrar" value="Cadastrar">
+                            <br><br>
+                            <a id="cadastrar-facebook-button"><i class="fab fa-facebook-square"></i> Cadastrar com o
+                                Facebook</a>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-cadastre col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <span class="close">&times;</span>
+                    <div>
+                        <h4>Ola, seja bem-vindo</h4>
+                        <p>Cadastre-se preenchendo o formulario ao lado para acessar o NatuVeggie.</p>
+                        <p>Ja possui uma conta? Entao, aperte o botao abaixo para criar sua conta.</p><br><br>
+                        <input type="button" class="btn btn-success btn-lg" id="link-entrar" value="Entre">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="formulario-loja">
+        <div class="content-adm" style="height:600px;">
+            <div class="titulo-adm">
+                Informações de pagamento
+            </div>
+            <div style="margin-top: 60px">
+                <h1>Cartões cadastrados</h1>
+                <select name="" id="select-cartao"></select>
+                <input type="button" class="botao-alterar" style="margin-top:20px;" id="deletarCartao" value="Deletar">
+            </div>
+        </div>
+        <div class="sidebar-left">
+            <div class="left-menu">
+                <div class="accordion-adm">
+                    <div class="user-login">
+                        <p>Olá,<span id="nomeUsuarioMenu"> </span>!</p>
+                    </div>
+                    <div class="section-adm">
+                        <input type="radio" name="accordion-1" id="section-1" checked="checked" />
+                        <label for="section-1"><i class="fas fa-user-edit" style="margin-right:-8px;"></i><span>Meus
+                                dados</span></label>
+                        <div class="content">
+                            <ul>
+                                <li><a href="/perfil"><i class="fas fa-heart"></i><span>Dados gerais</span></li></a>
+                                <li><a href="/formas-de-pagamento.html"><i class="fas fa-credit-card"
+                                            style="color:#88b87c;"></i><span style="color:#88b87c;">Formas de
+                                            pagamento</span></a></li>
+                                <li><a href="/enderecos.html"><i class="fas fa-credit-card"></i>
+                                        <span">Endereços</span>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section-adm">
+                        <input type="radio" name="accordion-1" id="section-2" value="toggle" />
+                        <label for="section-2"><i class="fas fa-shopping-bag"></i><span>Compras</span></label>
+                        <div class="content">
+                            <ul>
+                                <li><i class="fas fa-heart"></i><span>Favoritos</span></li>
+                                <li><i class="fas fa-ticket-alt"></i><span>Meus cupons</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section-adm">
+                        <input type="radio" name="accordion-1" id="section-4" value="toggle" />
+                        <a href="/meus-pedidos"
+                            style="font-family:'Montserrat', sans-serif; font-weight: 400; color:#8f8f8f;"><label><i
+                                    class="fas fa-box" style="margin-right:-4.5px;"></i><span> Meus
+                                    Pedidos</span></label></a>
+                    </div>
+                    <div class="section-adm">
+                        <input type="radio" name="accordion-1" id="section-3" />
+                        <label for="section-3"><i class="fas fa-store"
+                                style="margin-right:-12px;"></i><span>Vendas</span></label>
+                        <div class="content">
+                            <ul>
+                                <li><a class="loja"><i class="fas fa-tools"></i><span>Minha loja</span></a></li>
+                                <li><i class="fas fa-archive"></i><span>Produtos</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section-adm">
+                        <input type="radio" name="accordion-1" id="section-4" value="toggle" />
+                        <label for="section-4"><i class="fas fa-question-circle"
+                                style="margin-right:-10.6px;"></i><span>Ajuda</span></label>
+                    </div>
+                    <div class="section-adm">
+                        <input type="radio" name="accordion-1" id="section-5" value="toggle" />
+                        <label for="section-5"><i class="fas fa-cog"
+                                style="margin-right:-5.2px;"></i><span>Configurações</span></label>
+                        <div class="content">
+                            <ul>
+                                <li><i class="fas fa-lock"></i><span>Segurança</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section-adm">
+                        <a href="/vendedor" target="_black"
+                            style="font-family:'Montserrat', sans-serif; font-weight: 400; color:#8f8f8f;"><label><i
+                                    class="fas fa-coins" style="margin-right:-4.5px;"></i><span> Tornar-se
+                                    vendedor</span></label></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <!-- Footer -->
+    <footer class="footer-distributed" style="margin-top:0px;">
+        <div id="produto" style="margin-top:0px;">
+            <div class="footer-left">
+
+                <p class="footer-links">
+                    <a href="/sobre">Sobre</a>
+                    ·
+                    <a href="/categorias-filtro">Categorias</a>
+                    ·
+                    <a href="/contato">Contato</a>
+                </p>
+
+                <p class="footer-company-name">NatuVeggie - Sua loja de produtos orgânicos veganos</p>
+
+            </div>
+
+            <div class="footer-right">
+
+                <form method="get" action="#">
+                    <input placeholder="Receba nossas novidades, digite seu e-mail aqui!" name="search" />
+                    <i class="fa fa-chevron-circle-right"></i>
+                </form>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright -->
+    <div class="footer-distributed2" style="margin-top:0px;">
+        <div id="produto" style="margin-top:0px;">
+            <div class="footer-left2">
+
+                <p class="footer-company-name">2019 Copyright - Todos os direitos reservados</p>
+
+            </div>
+
+            <div class="footer-right2">
+
+                <i class="fab fa-paypal"></i>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JQUERY -->
+    <script src="js/jquery/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery/jquery-2.1.1.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <!-- Perfil -->
+    <script src="js/perfil.js"></script>
+
+    <!-- Carrinho Menu -->
+    <script src="js/boxCarrinhoMenu.js"></script>
+
+    <!-- Sidebar -->
+    <script src="js/recursos/sidebar.js"></script>
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+    <!-- Verifica se é vendedor e admin -->
+    <script src="js/verificaVendedor.js"></script>
+    <script src="js/verificaAdmin.js"></script>
+
+    <!-- Intregração com o Facebook -->
+    <script src="https://cdn.rawgit.com/oauth-io/oauth-js/c5af4519/dist/oauth.js"></script>
+
+    <!-- Máscara de e-mail, telefone e CPF -->
+    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.1.0/vanilla-masker.min.js"></script>
+    <script src="js/validacaoDeCampos/validadorCPF.js"></script>
+    <script src="js/validacaoDeCampos/validadorCNPJ.js"></script>
+    <script src="js/validacaoDeCampos/validadorTelefone.js"></script>
+    <script src="js/validacaoDeCampos/validadorData.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <!-- Modal cadastro/login -->
+    <script src="js/modal.js"></script>
+    <script src="js/modalCadastrarEntrar.js"></script>
+
+    <!-- Cadastro e login -->
+    <script src="js/loginUsuario.js"></script>
+    <script src="js/cadastrarUsuario.js"></script>
+
+    <!-- Validação -->
+    <script src="js/validacaoDeCampos/validadorCartao.js"></script>
+
+    <!-- Cadastro e login com o Facebook -->
+    <script src="js/cadastrarUsuarioFacebook.js"></script>
+    <script src="js/loginUsuarioFacebook.js"></script>
+
+    <!-- Menu aim -->
+    <script src="js/main.js"></script>
+    <script src="js/jquery/jquery.menu-aim.js"></script>
+</body>
+
+</html>

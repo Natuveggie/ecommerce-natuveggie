@@ -1,0 +1,166 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*------------------CSS3------------------*/
+/* CSS3 => Cascade Style Sheets 3 */
+
+
+#loadmore {
+    margin: 5px auto;
+    font-family: 'Montserrat', sans-serif;
+    padding: 8px 0;
+    width: 60px;
+    height:60px;
+    border-radius:100%;
+    text-align: center;
+    color: #838383;
+    display: block;
+    text-decoration: none;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    font-size:60px;
+}
+
+.comentariounico {
+    width:100%;
+    height:141px;
+    border: 1px solid #9e9e9e;
+    padding:0px;
+    margin:0 auto;
+    position: relative;
+    margin-bottom:30px;
+    display:none;
+}
+
+.nomefotocm {
+    width:35%;
+    height:100%;
+    float:left;
+    padding:20px;
+    text-align: left;
+}
+
+.nomefotocm img {
+    width:100px;
+    height:100px;
+    border-radius: 100%;
+    background:#000;
+    position: relative;
+    float:left;
+    margin-right:15px;
+    object-fit: cover;
+}
+
+.nomefotocm h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:15px;
+    font-weight: 800;
+    margin-top:30px;
+    color:#88b87c;
+}
+
+.nomefotocm h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:15px;
+    font-weight: 500;
+    color:#383838;
+    float:left;
+    font-style:italic;
+    margin-top:12px;
+}
+
+.textocoment {
+    width:65%;
+    float:right;
+    height:100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 0px 20px 0px 20px;
+    text-align:right;
+}
+
+.textocoment p {
+    font-family: 'Montserrat', sans-serif;
+    font-size:13px;
+    letter-spacing: 1px;
+    color:#838383;
+    text-align: justify;
+    font-style:italic;
+    text-align: right;
+    
+}
+
+@media screen and (max-width:1200px) {
+
+    .comentariounico {
+        width:100%;
+        height:auto;
+        border: 1px solid #000;
+        padding:0px 20px 20px 20px;
+        margin:0 auto;
+        position: relative;
+        margin-bottom:20px;
+        display:none;
+    }
+
+    .nomefotocm {
+        width:100%;
+        float:none;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .nomefotocm img {
+        width:70px;
+        height:70px;
+        float:none;
+        margin: 0 auto;
+    }
+
+    .nomefotocm h1 {
+        margin-top:20px;
+    }
+
+    .nomefotocm h2 {
+        float:none;
+        text-align:center;
+    }
+
+    .textocoment {
+        width:100%;
+        float:none;
+        height:100%;
+        display: block;
+        -webkit-align-items:none;
+        align-items:none;
+        -webkit-justify-content: none;
+        justify-content: none;
+        padding: 0px 0px 0px 0px;
+        text-align:center;
+    }
+    
+    .textocoment p {
+        font-family: 'Montserrat', sans-serif;
+        font-size:13px;
+        letter-spacing: 1px;
+        color:#838383;
+        text-align: justify;
+        font-style:italic;
+        text-align:center;
+        
+    }
+}

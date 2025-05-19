@@ -1,0 +1,83 @@
+/* ----------------------------------------------------------------------------- */
+/* BREADCRUMB */
+.breadcrumb-content{
+    /* padding: 0px 160px; */
+    padding: 0px 80px;
+    /* margin-top: 70px; */
+    margin-top: 25px;
+}
+.breadcrumb{
+    background-color: #5f8569;
+}
+.breadcrumb-text{ 
+    padding: 20px;
+    color: #fff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+.breadcrumb-text a{ 
+    font-weight: 600;
+    font-size: 0.8em;
+}
+.breadcrumb-text strong, a{ 
+    font-weight: 600;
+}
+.breadcrumb-text strong{ 
+    color: #0b412a;
+}
+.breadcrumb-text a{ 
+    float: right;
+    color: #fff;
+}
+/* ----------------------------------------------------------------------------- */
+/* MEDIA QUERY */
+
+@media (max-width: 340.98px){
+    .breadcrumb-content{
+        padding: 0px 20px;
+        margin-top: 25px;
+    }
+    .breadcrumb-text a{
+        font-size: 0.7em;
+        float: left;
+    }
+}
+@media (max-width: 575.98px) {
+    .breadcrumb-content{
+        padding: 0px 20px;
+        margin-top: 25px;
+    }
+    .breadcrumb-text a{
+        font-size: 0.7em;
+        float: left;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .breadcrumb-content{
+        padding: 0px 20px;
+        margin-top: 25px;
+    }
+    .breadcrumb-text a{
+        font-size: 0.7em;
+        float: left;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .breadcrumb-content{
+        /* padding: 0px 35px; */
+        padding: 0px;
+        margin-top: 25px;
+    }
+    .breadcrumb-text a{
+        font-size: 0.7em;
+        float: left;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .breadcrumb-content{
+        padding: 0px 35px;
+        margin-top: 25px;
+        margin-left: 75px;
+        /* margin-left: 0px; */
+    }
+}

@@ -1,0 +1,81 @@
+/* ----------------------------------------------------------------------------- */
+/* BOTÕES */
+
+.botao-tabela{
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 5px;
+    border: none;
+    margin-top: 15px;
+}
+.botao-anunciar{
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 8px 8px;
+    border: 1px solid #5f8569;
+    background:#5f8569;
+    color:#fff;
+    margin-top: 15px;
+    margin-right:5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.botao-anunciar:hover {
+    border: 1px solid #5f8569;
+    background-color:#fff;
+    color:#5f8569;
+    -webkit-transition:All 0.4s  ease-in-out; -moz-transition:All 0.4s ease-in-out; -o-transition:All 0.4s ease-in-out;
+}
+
+.botao-cadastrar-prod {
+    width:20%;
+    height:100px;
+    cursor: pointer;
+    border:none;
+    margin-bottom:30px;
+}
+
+.botao-prod{
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 8px 8px;
+    border: 1px solid #5f8569;
+    color:#5f8569;
+    margin-top: 15px;
+    margin-right:5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.botao-prod:hover {
+    background-color:#5f8569;
+    color:#fff;
+    -webkit-transition:All 0.4s  ease-in-out; -moz-transition:All 0.4s ease-in-out; -o-transition:All 0.4s ease-in-out;
+}
+
+.btn-salvar {
+    background-color: #28a745;
+}
+.btn-cancelar {
+    background-color: #17a2b8;
+}
+.btn-alterar {
+    background-color: #c7d656;
+}
+.btn-editar {
+    background-color: #ddd;
+}
+.btn-editar:hover{
+    background-color: #0069cc;
+}
+.btn-deletar{
+    background-color: #ddd;
+}
+.btn-deletar:hover{
+    background-color: #dc3545;
+}

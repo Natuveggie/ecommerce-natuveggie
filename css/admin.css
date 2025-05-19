@@ -1,0 +1,157 @@
+
+.clientes-content{
+    margin: 30px 80px;
+    color: #333;
+}
+.clientes-content h1{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #c7d656;
+    font-weight: 600;
+}
+.clientes-content #dados{
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #555;
+    padding: 15px 0px;
+    margin-top: 15px;
+}
+/* ----------------------------------------------------------------------------- */
+/* INDICADORES */
+
+.indicador{
+    float:left;
+    margin-right:60px;
+    margin-top:20px;
+}
+.num-indicador{
+    font-size: 2.5em;
+    font-weight: 550;
+    margin: 10px 0px;
+    color: #555;
+    cursor: pointer;
+}
+.num-indicador:hover{
+    color: #5f8569;
+}
+.legenda-indicador{
+    color: #666;
+}
+
+.tabela-user {
+    margin-top:40px;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* BOTOES */
+
+.botao-tabela{
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 5px;
+    border: none;
+    margin-top: 15px;
+}
+
+.btn-alterar {
+    background-color: #c7d656;
+}
+.btn-editar {
+    background-color: #ddd;
+}
+.btn-editar:hover{
+    background-color: #0069cc;
+}
+.btn-deletar{
+    background-color: #ddd;
+}
+.btn-deletar:hover{
+    background-color: #a51b0b;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* TABELA */
+
+.lista-clientes{
+    margin-top: 60px;
+}
+.lista-tabela-clientes{
+    margin-top: 20px;
+}
+.tabela-lista-cliente tr td{
+    line-height: 25px;
+}
+
+.altura-ped {
+    padding-bottom:170px;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* MEDIA QUERY */
+
+@media (max-width: 340.98px){
+    .lista-produto-acoes {
+       display: none !important;
+    }
+}
+@media (max-width: 575.98px) { 
+    .lista-produto-acoes {
+       display: none !important;
+    }
+    .meus-produtos {
+        width: 100%;
+    }
+    .cadastro-produtos-content{
+        margin: 30px 0px;
+    }
+    .botao-anunciar{
+        line-height: 50px;
+    }
+    .tabela-lista-produto tr td {
+        line-height: 18px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .lista-produto-acoes {
+       display: none !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .lista-produtos{
+        margin-top: 25px;
+    }
+    .cadastro-produtos-content{
+        margin: 30px 0px;
+    }
+    .botao-anunciar{
+        line-height: 50px;
+    }
+    .meus-produtos {
+        width: 100%;
+    }
+    .tabela-lista-produto tr td {
+        line-height: 18px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .lista-produtos{
+        margin: 25px 0px;
+    }
+    .lista-produto{
+        margin-bottom: 35px;
+    }
+    .content-carrinho{
+        margin-left: 84px;
+    }
+    .botao-anunciar{
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width){
+    .altura-ped {
+        padding-bottom:0px;
+    }
+}
